@@ -1,6 +1,7 @@
 nav{
     background-color: #00330e;
     height: 100px !important;
+    margin-bottom: 50px;
 }
 
 .logo-container{
@@ -10,7 +11,6 @@ nav{
     align-items: center;
     margin-bottom: 5px !important;
     padding-left: 20px;
-
 }
 
 #dlsu-logo{
@@ -37,6 +37,18 @@ span{
     height: 100px;
 }
 
-.container{
-    padding-top: 30px;
+.filter-container{
+    background-color: whitesmoke;
+    padding: 10px 20px 10px 20px;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 100px;
 }
+
+/*.container .materials-container{
+    margin-left: 200px;
+}*/
+
+

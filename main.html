@@ -40,8 +40,31 @@
         </nav>
         
         <!--Main-->
+        
+        <!--Filter-->
+        <!--<div class="filter-container">
+            <p><b>Filters</b></p>
+            <form action="#">
+                <p>
+                  <input type="checkbox" id="fltr-author" />
+                  <label for="fltr-author">Author</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="fltr-title" />
+                  <label for="fltr-title">Title</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="fltr-publisher"/>
+                  <label for="fltr-publisher">Publisher</label>
+                </p>
+            </form>
+        </div>-->
+        
+        <!--Books/Magazines/Thesis/etc-->
         <div class="container">
-            <div class="row">
+            <div class="row  materials-container">
+                
+                <!--AVAILABLE BOOK SAMPLE-->
                 <div class="col s4 m4 l4">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light green lighten-5" style="padding: 20px;">
@@ -54,47 +77,54 @@
                             <p style="float: right; color: green;"><b>Available</b></p>
                           </span>
                         </div>
+                        
+                        <!--Material details-->
                         <div class="card-reveal">
-                          <span class="card-title grey-text text-darken-4">To Kill A Mockingbird<i class="material-icons right">close</i></span>
-                          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col s4 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light green lighten-5" style="padding: 20px;">
-                          <img class="activator" src="https://openclipart.org/image/800px/svg_to_png/182754/magazine.png" style="height: 200px; width: 180px; margin-left: 20%;">
-                        </div>
-                        <div class="card-content">
-                          <span class="card-title activator grey-text text-darken-4">Cosmopolitan<i class="material-icons right">more_vert</i></span>
-                          <span>
-                            <a href="#">Reserve</a>
-                            <p style="float: right; color: green;"><b>Available</b></p>
+                          <span class="card-title grey-text text-darken-4"><b>To Kill A Mockingbird</b><i class="material-icons right">close</i></span>
+                          <p><i>823.914</i></p>
+                          <p><i>R797c</i></p>
+                          <p><b>Author/s: </b>Harper Lee</p>
+                          <p><b>Publisher/s: </b>J.B. Lippincott</p>
+                          <p><b>Year: </b>1960</p>
+                          <p><b>Tags: </b> <i>Southern Gothic, Coming-of-Age Fiction, Bildungsroman</i></p>
+                          <span style="display: flex;">
+                            <p><b>Status: &nbsp;</b></p> 
+                            <p id="status" style="color: green;"><b>Available</b></p>
                           </span>
-                        </div>
-                        <div class="card-reveal">
-                          <span class="card-title grey-text text-darken-4">Cosmopolitan<i class="material-icons right">close</i></span>
-                          <p>This is a magazine.</p>
+                          <p><b>Reservation Date: </b>June 3, 2017</p>
+                          <p><b>Return Date: </b>June 10, 2017</p>
                         </div>
                     </div>
                 </div>
                 
+                <!--NOT AVAILABLE THESIS SAMPLE-->
                 <div class="col s4 m4 l4">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light green lighten-5" style="padding: 20px;">
                           <img class="activator" src="res/thesis.png" style="height: 200px; width: 180px; margin-left: 20%;">
                         </div>
                         <div class="card-content">
-                          <span class="card-title activator grey-text text-darken-4">Thesis-It<i class="material-icons right">more_vert</i></span>
+                          <span class="card-title activator grey-text text-darken-4">Thesis Material<i class="material-icons right">more_vert</i></span>
                           <span>
                             <a href="#" style="color: gray;">Reserve</a>
                             <p style="float: right; color: red;"><b>Not Available</b></p>
                           </span>
                         </div>
+                        <!--Material details-->
                         <div class="card-reveal">
-                          <span class="card-title grey-text text-darken-4">Thesis-It<i class="material-icons right">close</i></span>
-                          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                          <span class="card-title grey-text text-darken-4"><b>Thesis Material</b><i class="material-icons right">close</i></span>
+                          <p><i>123.456</i></p>
+                          <p><i>A123c</i></p>
+                          <p><b>Author/s: </b>Arceo, Patrick; Cheng, Clarisse; Marcelo, Micaella</p>
+                          <p><b>Publisher/s: </b>Peradilla, Marnel</p>
+                          <p><b>Year: </b>2017</p>
+                          <p><b>Tags: </b> <i>Secure Development, Machine Project, Ayoko Na</i></p>
+                          <span style="display: flex;">
+                            <p><b>Status: &nbsp;</b></p> 
+                            <p id="status" style="color: red;"><b>Not Available</b></p>
+                          </span>
+                          <p><b>Date of Availability: </b>June 23, 2017</p>
+                          <p><b>Time of Availability: </b>13:30</p>
                         </div>
                     </div>
                 </div>
