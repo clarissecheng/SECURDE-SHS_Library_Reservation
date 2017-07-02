@@ -34,6 +34,7 @@ span{
     padding: 20px;
     list-style-type: none;
     display:inline-block;
+    height: 100px;
 }
 
 .container{
