@@ -35,3 +35,7 @@ span{
     list-style-type: none;
     display:inline-block;
 }
+
+.container{
+    padding-top: 30px;
+}
