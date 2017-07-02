@@ -14,3 +14,16 @@
     margin-top: 25px !important;
     margin-left: -15px !important;
 }
+
+#user_type{
+    margin-top: 5px;
+}
+
+#btn-register{
+    background-color: #00330e;
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 43%;
+    margin-bottom: 30px;
+}
