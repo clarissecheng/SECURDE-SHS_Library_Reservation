@@ -26,42 +26,76 @@
 
                  <ul id="nav-mobile" class="right">
                     <li>
-                        <div class="input-field col s12">
-                          <i class="material-icons prefix">search</i>
-                          <input type="text" id="autocomplete-input" class="autocomplete">
-                          <label for="autocomplete-input">Search</label>
-                        </div>
+                        <select class="browser-default">
+                           <option value="" disabled selected>Search by: </option>
+                           <option value="1">Author</option>
+                           <option value="2">Title</option>
+                           <option value="3">Publisher</option>
+                       </select>
                     </li>
-                    <li><a href="badges.html">Books</a></li>
+                    <li>
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <input id="last_name" type="text" class="validate">
+                              <label for="last_name">Search</label>
+                            </div>
+                        </div>                     
+                    </li>
+                    <li><a href="badges.html">Literary Materials</a></li>
                     <li><a href="collapsible.html">Rooms</a></li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class='dropdown-button' href='#' data-activates='dropdown1'><i class="material-icons prefix">settings</i></a>
+
+                          <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a href="#!">Edit Profile</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul> 
+                    </li>
                 </ul>
-              
+
             </div>
         </nav>
         
         <!--Main-->
         
         <!--Filter-->
-        <!--<div class="filter-container">
-            <p><b>Filters</b></p>
-            <form action="#">
-                <p>
-                  <input type="checkbox" id="fltr-author" />
-                  <label for="fltr-author">Author</label>
-                </p>
-                <p>
-                  <input type="checkbox" id="fltr-title" />
-                  <label for="fltr-title">Title</label>
-                </p>
-                <p>
-                  <input type="checkbox" id="fltr-publisher"/>
-                  <label for="fltr-publisher">Publisher</label>
-                </p>
-            </form>
-        </div>-->
+        <div class="row filter-container">
+            <div class="col s1">
+                <p>Categories: </p>
+            </div>
+            <div class="col s4">
+                <form action="#" name="filter-form">
+                    <div class="row">
+                        <div class="col s4">
+                            <p>
+                              <input type="checkbox" id="books" />
+                              <label for="books">Books</label>
+                            </p>
+                        </div>
+                        <div class="col s4">
+                            <p>
+                              <input type="checkbox" id="magazines"/>
+                              <label for="magazines">Magazines</label>
+                            </p>
+                        </div>
+                        <div class="col s4">
+                            <p>
+                              <input type="checkbox" id="thesis"/>
+                              <label for="thesis">Thesis</label>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         
         <!--Books/Magazines/Thesis/etc-->
         <div class="container">
+            <div class="row">
+                
+            </div>
             <div class="row  materials-container">
                 
                 <!--AVAILABLE BOOK SAMPLE-->
@@ -73,7 +107,7 @@
                         <div class="card-content">
                           <span class="card-title activator grey-text text-darken-4">To Kill A Mockingbird<i class="material-icons right">more_vert</i></span>
                           <span>
-                            <a href="#">Reserve</a>
+                            <a href="#">More details</a>
                             <p style="float: right; color: green;"><b>Available</b></p>
                           </span>
                         </div>
@@ -106,7 +140,7 @@
                         <div class="card-content">
                           <span class="card-title activator grey-text text-darken-4">Thesis Material<i class="material-icons right">more_vert</i></span>
                           <span>
-                            <a href="#" style="color: gray;">Reserve</a>
+                            <a href="#">More details</a>
                             <p style="float: right; color: red;"><b>Not Available</b></p>
                           </span>
                         </div>
@@ -124,7 +158,6 @@
                             <p id="status" style="color: red;"><b>Not Available</b></p>
                           </span>
                           <p><b>Date of Availability: </b>June 23, 2017</p>
-                          <p><b>Time of Availability: </b>13:30</p>
                         </div>
                     </div>
                 </div>

@@ -37,18 +37,27 @@ span{
     height: 100px;
 }
 
-.filter-container{
-    background-color: whitesmoke;
-    padding: 10px 20px 10px 20px;
-    width: 200px;
-    height: 200px;
-    position: fixed;
-    margin-top: 10px;
-    margin-left: 100px;
-}
-
 /*.container .materials-container{
     margin-left: 200px;
 }*/
 
+.dropdown-content li a{
+    color: #00330e !important;
+}
 
+.browser-default{
+    background-color: #00330e;
+    color: white;
+    border-style: none;
+    margin-top: 9px;
+}
+
+.filter-container{
+    position: relative;
+   left: 32%;
+}
+
+option{
+    background-color: white;
+    color: #00330e;
+}
