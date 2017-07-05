@@ -134,6 +134,21 @@ a.reserve.disabled:hover{
     left: 1425px;
     top: 650px;
 }
+
 .modal#add{
     width: 800px;
+}
+
+.browser-default.rooms{
+    background-color: white;
+    color: #00330e;
+}
+
+.reserve-rooms-container{
+    padding: 20px;
+}
+
+.btn-reserve{
+    margin-top: 25px;
+    background-color: #00330e;
 }

@@ -41,8 +41,8 @@
                             </div>
                         </div>                     
                     </li>
-                    <li><a href="badges.html">Literary Materials</a></li>
-                    <li><a href="collapsible.html">Rooms</a></li>
+                    <li><a href="#literary-materials-container" id="literary-materials">Literary Materials</a></li>
+                    <li><a href="#reserve-rooms-container" id="reserve-rooms">Rooms</a></li>
                     <li>
                         <!-- Dropdown Trigger -->
                         <a class='dropdown-button' href='#' data-activates='dropdown1'><i class="material-icons prefix">settings</i></a>
@@ -60,187 +60,185 @@
         
         <!--Main-->
         
-        <!--Filter-->
-        <div class="row filter-container">
-            <div class="col s1">
-                <p>Categories: </p>
+
+        <div id="literary-materials-container">
+            <!--Filter-->
+            <div class="row filter-container">
+                <div class="col s1">
+                    <p>Categories: </p>
+                </div>
+                <div class="col s4">
+                    <form action="#" name="filter-form">
+                        <div class="row">
+                            <div class="col s4">
+                                <p>
+                                  <input type="checkbox" id="books" />
+                                  <label for="books">Books</label>
+                                </p>
+                            </div>
+                            <div class="col s4">
+                                <p>
+                                  <input type="checkbox" id="magazines"/>
+                                  <label for="magazines">Magazines</label>
+                                </p>
+                            </div>
+                            <div class="col s4">
+                                <p>
+                                  <input type="checkbox" id="thesis"/>
+                                  <label for="thesis">Thesis</label>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="col s4">
-                <form action="#" name="filter-form">
-                    <div class="row">
-                        <div class="col s4">
-                            <p>
-                              <input type="checkbox" id="books" />
-                              <label for="books">Books</label>
-                            </p>
-                        </div>
-                        <div class="col s4">
-                            <p>
-                              <input type="checkbox" id="magazines"/>
-                              <label for="magazines">Magazines</label>
-                            </p>
-                        </div>
-                        <div class="col s4">
-                            <p>
-                              <input type="checkbox" id="thesis"/>
-                              <label for="thesis">Thesis</label>
-                            </p>
+
+            <!--Books/Magazines/Thesis/etc-->
+            <div class="container">
+                <div class="row  materials-container">
+                    <!--Sample of Available Book Material-->
+                    <div class="col s12">
+                        <div class="row grey lighten-4 material-container">
+                            <div class="col s1 material-type center">
+                                <img class="material-icon" src="res/book.png">
+                                <p class=""><b>Book</b></p>
+                            </div>
+                            <div class="col s10">
+                                <a id="item1"><b>The Impact of terror attacks in Asia to the Philippine stock market</b></a>
+                                <p><b>Author/s: </b>Chen, Davian; Lim, Belinda Jane; Rempillo, Alexandre Miguel; Sanchez, Bianca Isabel</p>
+                                <p><b>Publisher/s: </b>Lee, Bruce</p>
+                                <p><b>Year: </b>2016</p>
+                                <br>
+                                <p><b>Location: </b><i>123.456; A123c</i></p>
+                                <p><b>Tags: </b> <i>text rdacontent, computer rdamedia, computer disc rdacarrier, stock market</i></p>
+                                <span style="display: flex;">
+                                <p><b>Status: &nbsp;</b></p> 
+                                <p id="status" style="color: green;"><b>Available</b></p>
+                              </span>
+                              <p><b>Reservation Date: </b>June 3, 2017</p>
+                              <p><b>Return Date: </b>June 10, 2017</p>
+                                <br>
+                                <a class="reserve" href="#modal1"><b>Reserve</b></a>
+                            </div>
                         </div>
                     </div>
-                </form>
+
+                    <!--Sample for Unavailable Thesis Material-->
+                    <div class="col s12">
+                        <div class="row grey lighten-4 material-container">
+                            <div class="col s1 material-type center">
+                                <img class="material-icon" src="res/thesis.png">
+                                <p class=""><b>Thesis</b></p>
+                            </div>
+                            <div class="col s10">
+                                <a id="item2"><b>Computer aided system for sheet metal pattern development application : an object-oriented approach</b></a>
+                                <p><b>Author/s: </b>Salvador, Florante</p>
+                                <p><b>Publisher/s: </b>Peradilla, Marnel</p>
+                                <p><b>Year: </b>1990</p>
+                                <br>
+                                <p><b>Location: </b><i>123.456; A123c</i></p>
+                                <p><b>Tags: </b> <i>Computer design and construction, Computer systems, Computer-aided design, 	Computer input-output equipment -- Design -- Data processing</i></p>
+                              <span style="display: flex;">
+                                <p><b>Status: &nbsp;</b></p> 
+                                <p id="status" style="color: red;"><b>Not Available</b></p>
+                              </span>
+                              <p><b>Date of Availability: </b>June 23, 2017</p>
+                                <br>
+                                <a class="reserve disabled"><b>Reserve</b></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Sample for Unavailable Magazine-->
+                    <div class="col s12">
+                        <div class="row grey lighten-4 material-container">
+                            <div class="col s1 material-type center">
+                                <img class="material-icon" src="res/magazine.png">
+                                <p class=""><b>Magazine</b></p>
+                            </div>
+                            <div class="col s10">
+                                <a id="item2"><b>Feature and magazine writing : action, angle and anecdotes</b></a>
+                                <p><b>Author/s: </b>Summer, David</p>
+                                <p><b>Publisher/s: </b>Travolta, John</p>
+                                <p><b>Year: </b>2013</p>
+                                <br>
+                                <p><b>Location: </b><i>123.456; A123c</i></p>
+                                <p><b>Tags: </b> <i>feature writing, journalism</i></p>
+                              <span style="display: flex;">
+                                <p><b>Status: &nbsp;</b></p> 
+                                <p id="status" style="color: red;"><b>Not Available</b></p>
+                              </span>
+                              <p><b>Date of Availability: </b>July 19, 2017</p>
+                                <br>
+                              <a class="reserve disabled"><b>Reserve</b></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
             </div>
         </div>
         
-        <!--Books/Magazines/Thesis/etc-->
-        <div class="container">
-            <div class="row  materials-container">
-                
-                <!--AVAILABLE BOOK SAMPLE-->
-                <!--<div class="col s4 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light green lighten-5" style="padding: 20px;">
-                          <img class="activator" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/book-icon.png" style="height: 200px; width: 180px; margin-left: 20%;">
-                        </div>
-                        <div class="card-content">
-                          <span class="card-title activator grey-text text-darken-4">To Kill A Mockingbird<i class="material-icons right">more_vert</i></span>
-                          <span>
-                            <a href="#">More details</a>
-                            <p style="float: right; color: green;"><b>Available</b></p>
-                          </span>
-                        </div>
-                        
-                       
-                        <div class="card-reveal">
-                          <span class="card-title grey-text text-darken-4"><b>To Kill A Mockingbird</b><i class="material-icons right">close</i></span>
-                          <p><i>823.914</i></p>
-                          <p><i>R797c</i></p>
-                          <p><b>Author/s: </b>Harper Lee</p>
-                          <p><b>Publisher/s: </b>J.B. Lippincott</p>
-                          <p><b>Year: </b>1960</p>
-                          <p><b>Tags: </b> <i>Southern Gothic, Coming-of-Age Fiction, Bildungsroman</i></p>
-                          <span style="display: flex;">
-                            <p><b>Status: &nbsp;</b></p> 
-                            <p id="status" style="color: green;"><b>Available</b></p>
-                          </span>
-                          <p><b>Reservation Date: </b>June 3, 2017</p>
-                          <p><b>Return Date: </b>June 10, 2017</p>
-                        </div>
-                    </div>
-                </div>-->
-                
-                <!--NOT AVAILABLE THESIS SAMPLE
-                <div class="col s4 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light green lighten-5" style="padding: 20px;">
-                          <img class="activator" src="res/thesis.png" style="height: 200px; width: 180px; margin-left: 20%;">
-                        </div>
-                        <div class="card-content">
-                          <span class="card-title activator grey-text text-darken-4">Thesis Material<i class="material-icons right">more_vert</i></span>
-                          <span>
-                            <a href="#">More details</a>
-                            <p style="float: right; color: red;"><b>Not Available</b></p>
-                          </span>
-                        </div>
-                        
-                        <div class="card-reveal">
-                          <span class="card-title grey-text text-darken-4"><b>Thesis Material</b><i class="material-icons right">close</i></span>
-                          <p><i>123.456</i></p>
-                          <p><i>A123c</i></p>
-                          <p><b>Author/s: </b>Arceo, Patrick; Cheng, Clarisse; Marcelo, Micaella</p>
-                          <p><b>Publisher/s: </b>Peradilla, Marnel</p>
-                          <p><b>Year: </b>2017</p>
-                          <p><b>Tags: </b> <i>Secure Development, Machine Project, Ayoko Na</i></p>
-                          <span style="display: flex;">
-                            <p><b>Status: &nbsp;</b></p> 
-                            <p id="status" style="color: red;"><b>Not Available</b></p>
-                          </span>
-                          <p><b>Date of Availability: </b>June 23, 2017</p>
-                        </div>
-                    </div>
-                </div>-->
-                
-                <!--Sample of Available Book Material-->
-                <div class="col s12">
-                    <div class="row grey lighten-4 material-container">
-                        <div class="col s1 material-type center">
-                            <img class="material-icon" src="res/book.png">
-                            <p class=""><b>Book</b></p>
-                        </div>
-                        <div class="col s10">
-                            <a id="item1"><b>The Impact of terror attacks in Asia to the Philippine stock market</b></a>
-                            <p><b>Author/s: </b>Chen, Davian; Lim, Belinda Jane; Rempillo, Alexandre Miguel; Sanchez, Bianca Isabel</p>
-                            <p><b>Publisher/s: </b>Lee, Bruce</p>
-                            <p><b>Year: </b>2016</p>
-                            <br>
-                            <p><b>Location: </b><i>123.456; A123c</i></p>
-                            <p><b>Tags: </b> <i>text rdacontent, computer rdamedia, computer disc rdacarrier, stock market</i></p>
-                            <span style="display: flex;">
-                            <p><b>Status: &nbsp;</b></p> 
-                            <p id="status" style="color: green;"><b>Available</b></p>
-                          </span>
-                          <p><b>Reservation Date: </b>June 3, 2017</p>
-                          <p><b>Return Date: </b>June 10, 2017</p>
-                            <br>
-                            <a class="reserve" href="#modal1"><b>Reserve</b></a>
-                        </div>
+        <!--Reserve Rooms-->
+        <div id="reserve-rooms-container" >
+            <div class="container grey lighten-4 reserve-rooms-container">
+                <div class="row">
+                    <div class="col s4">
+                        <label>Room</label>
+                        <select class="browser-default rooms">
+                            <option value="" disabled selected>Select Room</option>
+                            <option value="1">8A</option>
+                            <option value="2">8B</option>
+                            <option value="3">8C</option>
+                            <option value="1">8D</option>
+                            <option value="2">8E</option>
+                            <option value="3">8F</option>
+                        </select>
                     </div>
                 </div>
-                
-                <!--Sample for Unavailable Thesis Material-->
-                <div class="col s12">
-                    <div class="row grey lighten-4 material-container">
-                        <div class="col s1 material-type center">
-                            <img class="material-icon" src="res/thesis.png">
-                            <p class=""><b>Thesis</b></p>
-                        </div>
-                        <div class="col s10">
-                            <a id="item2"><b>Computer aided system for sheet metal pattern development application : an object-oriented approach</b></a>
-                            <p><b>Author/s: </b>Salvador, Florante</p>
-                            <p><b>Publisher/s: </b>Peradilla, Marnel</p>
-                            <p><b>Year: </b>1990</p>
-                            <br>
-                            <p><b>Location: </b><i>123.456; A123c</i></p>
-                            <p><b>Tags: </b> <i>Computer design and construction, Computer systems, Computer-aided design, 	Computer input-output equipment -- Design -- Data processing</i></p>
-                          <span style="display: flex;">
-                            <p><b>Status: &nbsp;</b></p> 
-                            <p id="status" style="color: red;"><b>Not Available</b></p>
-                          </span>
-                          <p><b>Date of Availability: </b>June 23, 2017</p>
-                            <br>
-                            <a class="reserve disabled"><b>Reserve</b></a>
-                        </div>
+                <div class="row">
+                    <div class="col s2">
+                        <input id="time-start" type="time" class="validate" step="1800">
+                        <label for="time-start">Time Start</label>
+                    </div>
+                    <div class="col s2">
+                        <input id="time-end" type="time" class="validate" step="1800">
+                        <label for="time-end">Time End</label>
                     </div>
                 </div>
-                
-                <!--Sample for Unavailable Magazine-->
-                <div class="col s12">
-                    <div class="row grey lighten-4 material-container">
-                        <div class="col s1 material-type center">
-                            <img class="material-icon" src="res/magazine.png">
-                            <p class=""><b>Magazine</b></p>
-                        </div>
-                        <div class="col s10">
-                            <a id="item2"><b>Feature and magazine writing : action, angle and anecdotes</b></a>
-                            <p><b>Author/s: </b>Summer, David</p>
-                            <p><b>Publisher/s: </b>Travolta, John</p>
-                            <p><b>Year: </b>2013</p>
-                            <br>
-                            <p><b>Location: </b><i>123.456; A123c</i></p>
-                            <p><b>Tags: </b> <i>feature writing, journalism</i></p>
-                          <span style="display: flex;">
-                            <p><b>Status: &nbsp;</b></p> 
-                            <p id="status" style="color: red;"><b>Not Available</b></p>
-                          </span>
-                          <p><b>Date of Availability: </b>July 19, 2017</p>
-                            <br>
-                          <a class="reserve disabled"><b>Reserve</b></a>
-                        </div>
+                <br>
+                <h6><b>Available Time Slots:</b></h6>
+                <div class="row">
+                    <div class="col s5">
+                        <table>
+                            <thead>
+                              <tr>
+                                  <th>Time Slot</th>
+                                  <th>Room</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td>08:00 AM - 09:00 AM</td>
+                                <td>8A</td>
+                              </tr>
+                              <tr>
+                                <td>12:00 PM - 01:00 AAM</td>
+                                <td>8C</td>
+                              </tr>
+                            </tbody>
+                          </table>
                     </div>
                 </div>
-                
-                
-            </div>        
+            </div>
         </div>
+        
+        <div class="container">
+             <button class="btn waves-effect waves-light btn-reserve" type="submit" name="action">Reserve
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+       
         
         <!-- Modal Structure -->
           <div id="modal1" class="modal">
@@ -261,10 +259,21 @@
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script>
-            $(document).ready(function(){
+           $(document).ready(function(){
                 // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
                 $('.modal').modal();
+                $("#literary-materials-container").hide();
               });
+           
+            $("#literary-materials").click(function(){
+                $("#literary-materials-container").show();
+                $("#reserve-rooms-container").hide();
+            });
+
+            $("#reserve-rooms").click(function(){
+                $("#literary-materials-container").hide();
+                $("#reserve-rooms-container").show();
+            });
         </script>
     </body>
 

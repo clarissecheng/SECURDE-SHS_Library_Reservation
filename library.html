@@ -41,8 +41,8 @@
                             </div>
                         </div>                     
                     </li>
-                    <li><a href="#literary-materials">Literary Materials</a></li>
-                    <li><a href="#reserve-rooms">Rooms</a></li>
+                    <li><a href="#literary-materials-container" id="literary-materials">Literary Materials</a></li>
+                    <li><a href="#reserve-rooms-container" id="reserve-rooms">Rooms</a></li>
                     <li>
                         <!-- Dropdown Trigger -->
                         <a class='dropdown-button' href='#' data-activates='dropdown1'><i class="material-icons prefix">settings</i></a>
@@ -57,9 +57,9 @@
 
             </div>
         </nav>
-        
+
         <!--Main-->
-        <div id="literary-materials">
+        <div id="literary-materials-container">
             <!--Filter-->
             <div class="row filter-container">
                 <div class="col s1">
@@ -160,8 +160,11 @@
             </div>
         </div>
         
-        <div id="reserve-rooms">
-            asdfad
+        <!--Reserve Rooms-->
+        <div id="reserve-rooms-container">
+            <div class="container">
+                
+            </div>
         </div>
         
         
@@ -307,7 +310,18 @@
             $(document).ready(function(){
                 // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
                 $('.modal').modal();
+                $("#literary-materials-container").hide();
               });
+           
+            $("#literary-materials").click(function(){
+                $("#literary-materials-container").show();
+                $("#reserve-rooms-container").hide();
+            });
+
+            $("#reserve-rooms").click(function(){
+                $("#literary-materials-container").hide();
+                $("#reserve-rooms-container").show();
+            });
         </script>
     </body>
 
