@@ -1,0 +1,308 @@
+<html>
+    <head>
+        <title>SHS Library Reservation System</title>
+        
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import .css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/main-style.css"/>
+        
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <!--Header-->
+        <nav>
+            <div class="nav-wrapper">
+                <div class="logo-container">
+                    <img id="dlsu-logo" src="res/dlsu-logo.png">
+                    <div class="dlsu-text">
+                        <font size="3"><span>De La Salle University - Manila</span></font>
+                        <font size="2"><span>SHS Library Reservation System</span></font>
+                    </div>
+                </div>
+
+                 <ul id="nav-mobile" class="right">
+                    <li>
+                        <select class="browser-default">
+                           <option value="" disabled selected>Search by: </option>
+                           <option value="1">Author</option>
+                           <option value="2">Title</option>
+                           <option value="3">Publisher</option>
+                       </select>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <input id="last_name" type="text" class="validate">
+                              <label for="last_name">Search</label>
+                            </div>
+                        </div>                     
+                    </li>
+                    <li><a href="badges.html">Literary Materials</a></li>
+                    <li><a href="collapsible.html">Rooms</a></li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class='dropdown-button' href='#' data-activates='dropdown1'><i class="material-icons prefix">settings</i></a>
+
+                          <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a href="#!">Edit Profile</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul> 
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        
+        <!--Main-->
+        
+        <!--Filter-->
+        <div class="row filter-container">
+            <div class="col s1">
+                <p>Categories: </p>
+            </div>
+            <div class="col s4">
+                <form action="#" name="filter-form">
+                    <div class="row">
+                        <div class="col s4">
+                            <p>
+                              <input type="checkbox" id="books" />
+                              <label for="books">Books</label>
+                            </p>
+                        </div>
+                        <div class="col s4">
+                            <p>
+                              <input type="checkbox" id="magazines"/>
+                              <label for="magazines">Magazines</label>
+                            </p>
+                        </div>
+                        <div class="col s4">
+                            <p>
+                              <input type="checkbox" id="thesis"/>
+                              <label for="thesis">Thesis</label>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!--Books/Magazines/Thesis/etc-->
+        <div class="container">
+            <div class="row  materials-container">
+                
+                
+                <!--Sample of Available Book Material-->
+                <div class="col s12">
+                    <div class="row grey lighten-4 material-container">
+                        <div class="col s1 material-type center">
+                            <img class="material-icon" src="res/book.png">
+                            <p class=""><b>Book</b></p>
+                        </div>
+                        <div class="col s8">
+                            <a id="item1"><b>The Impact of terror attacks in Asia to the Philippine stock market</b></a>
+                            <p><b>Author/s: </b>Chen, Davian; Lim, Belinda Jane; Rempillo, Alexandre Miguel; Sanchez, Bianca Isabel</p>
+                            <p><b>Publisher/s: </b>Lee, Bruce</p>
+                            <p><b>Year: </b>2016</p>
+                            <br>
+                            <p><b>Location: </b><i>123.456; A123c</i></p>
+                            <p><b>Tags: </b> <i>text rdacontent, computer rdamedia, computer disc rdacarrier, stock market</i></p>
+                            <span style="display: flex;">
+                            <p><b>Status: &nbsp;</b></p> 
+                            <p id="status" style="color: green;"><b>Available</b></p>
+                          </span>
+                          <p><b>Reservation Date: </b>June 3, 2017</p>
+                          <p><b>Return Date: </b>June 10, 2017</p>
+                        </div>
+                        <div class="col s1">
+                            <a id="edit1" class="edit-icon" href="#edit1"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                        <div class="col s1">
+                            <a id="delete1" class="delete-icon" href="#delete1"><i class="material-icons">delete</i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Sample for Unavailable Thesis Material-->
+                <div class="col s12">
+                    <div class="row grey lighten-4 material-container">
+                        <div class="col s1 material-type center">
+                            <img class="material-icon" src="res/thesis.png">
+                            <p class=""><b>Thesis</b></p>
+                        </div>
+                        <div class="col s8">
+                            <a id="item2"><b>Computer aided system for sheet metal pattern development application : an object-oriented approach</b></a>
+                            <p><b>Author/s: </b>Salvador, Florante</p>
+                            <p><b>Publisher/s: </b>Peradilla, Marnel</p>
+                            <p><b>Year: </b>1990</p>
+                            <br>
+                            <p><b>Location: </b><i>123.456; A123c</i></p>
+                            <p><b>Tags: </b> <i>Computer design and construction, Computer systems, Computer-aided design, 	Computer input-output equipment -- Design -- Data processing</i></p>
+                          <span style="display: flex;">
+                            <p><b>Status: &nbsp;</b></p> 
+                            <p id="status" style="color: red;"><b>Not Available</b></p>
+                          </span>
+                          <p><b>Date of Availability: </b>June 23, 2017</p>
+                        </div>
+                        <div class="col s1">
+                            <a id="edit1" class="edit-icon" href="#edit1"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                        <div class="col s1">
+                            <a id="delete2" class="delete-icon" href=""><i class="material-icons">delete</i></a>
+                        </div>
+                    </div>
+                </div>   
+            </div>        
+        </div>
+        
+         <!-- Edit1 Modal Structure -->
+          <div id="edit1" class="modal edit">
+            <div class="modal-content">
+              <h5>Edit</h5>
+              <div class="row">
+                    <div class="col s12">
+                        <input id="title" type="text" class="validate" value="The Impact of terror attacks in Asia to the Philippine stock market">
+                        <label for="title">Title</label>
+                    </div>
+              </div>
+              <div class="row">
+                    <div class="col s6">
+                        <input id="author" type="text" class="validate" value="Chen, Davian; Lim, Belinda Jane; Rempillo, Alexandre Miguel; Sanchez, Bianca Isabel">
+                        <label for="author">Author/s</label>
+                    </div>
+                    <div class="col s6">
+                        <input id="publisher" type="text" class="validate" value="Lee, Bruce">
+                        <label for="publisher">Author/s</label>
+                    </div>
+              </div>
+              <div class="row">
+                    <div class="col s2">
+                        <input id="year" type="number" class="validate" value="2016">
+                        <label for="year">Year</label>
+                    </div>
+                    <div class="col s4">
+                        <input id="location" type="text" class="validate" value="123.456; A123c">
+                        <label for="location">Location</label>
+                    </div>
+                    <div class="col s3">
+                        <label>Status</label>
+                        <select class="browser-default status">
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="1" selected="selected">Available</option>
+                            <option value="2">Not Available</option>
+                        </select>
+                    </div>
+                    <div class="col s3">
+                        <label>Category</label>
+                        <select class="browser-default status">
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="1" selected="selected">Book</option>
+                            <option value="2">Thesis</option>
+                            <option value="2">Magazine</option>
+                        </select>
+                    </div>
+              </div>
+              <div class="row">
+                    <div class="col s12">
+                        <input id="tags" type="text" class="validate" value="text rdacontent, computer rdamedia, computer disc rdacarrier, stock market">
+                        <label for="tags">Tag/s</label>
+                    </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+            </div>
+          </div>  
+        
+        
+        <a class="btn-floating btn-large waves-effect waves-light red btn-add" href="#add"><i class="material-icons">add</i></a>
+        
+        <!-- Add Material Modal Structure -->
+          <div id="add" class="modal">
+            <div class="modal-content">
+              <h5>Add</h5>
+              <div class="row">
+                    <div class="col s12">
+                        <input id="title" type="text" class="validate">
+                        <label for="title">Title</label>
+                    </div>
+              </div>
+              <div class="row">
+                    <div class="col s6">
+                        <input id="author" type="text" class="validate">
+                        <label for="author">Author/s</label>
+                    </div>
+                    <div class="col s6">
+                        <input id="publisher" type="text" class="validate">
+                        <label for="publisher">Author/s</label>
+                    </div>
+              </div>
+              <div class="row">
+                    <div class="col s2">
+                        <input id="year" type="number" class="validate">
+                        <label for="year">Year</label>
+                    </div>
+                    <div class="col s4">
+                        <input id="location" type="text" class="validate">
+                        <label for="location">Location</label>
+                    </div>
+                    <div class="col s3">
+                        <label>Status</label>
+                        <select class="browser-default status">
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="1">Available</option>
+                            <option value="2">Not Available</option>
+                        </select>
+                    </div>
+                    <div class="col s3">
+                        <label>Category</label>
+                        <select class="browser-default status">
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="1">Book</option>
+                            <option value="2">Thesis</option>
+                            <option value="2">Magazine</option>
+                        </select>
+                    </div>
+              </div>
+              <div class="row">
+                    <div class="col s12">
+                        <input id="tags" type="text" class="validate">
+                        <label for="tags">Tag/s</label>
+                    </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+            </div>
+          </div>
+        
+            <!-- Delete Modal Structure -->
+          <div id="delete1" class="modal">
+            <div class="modal-content">
+              <h5>Delete</h5>
+              <p>Are you sure you want to delete item?</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Yes</a>
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">No</a>
+            </div>
+          </div>
+ 
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+                $('.modal').modal();
+              });
+        </script>
+    </body>
+
+</html>
