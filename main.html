@@ -180,6 +180,8 @@
                           </span>
                           <p><b>Reservation Date: </b>June 3, 2017</p>
                           <p><b>Return Date: </b>June 10, 2017</p>
+                            <br>
+                            <a class="reserve" href="#modal1"><b>Reserve</b></a>
                         </div>
                     </div>
                 </div>
@@ -204,6 +206,8 @@
                             <p id="status" style="color: red;"><b>Not Available</b></p>
                           </span>
                           <p><b>Date of Availability: </b>June 23, 2017</p>
+                            <br>
+                            <a class="reserve disabled"><b>Reserve</b></a>
                         </div>
                     </div>
                 </div>
@@ -228,6 +232,8 @@
                             <p id="status" style="color: red;"><b>Not Available</b></p>
                           </span>
                           <p><b>Date of Availability: </b>July 19, 2017</p>
+                            <br>
+                          <a class="reserve disabled"><b>Reserve</b></a>
                         </div>
                     </div>
                 </div>
@@ -236,11 +242,30 @@
             </div>        
         </div>
         
+        <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Reserve Material</h4>
+              <p>Are you sure you want to reserve material?</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Yes</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">No</a>
+            </div>
+          </div>
+          
+        
         
         
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+                $('.modal').modal();
+              });
+        </script>
     </body>
 
 </html>
