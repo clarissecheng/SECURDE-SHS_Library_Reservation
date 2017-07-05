@@ -231,15 +231,14 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                 <button class="btn waves-effect waves-light btn-reserve" type="submit" name="action">Reserve
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
         </div>
         
-        <div class="container">
-             <button class="btn waves-effect waves-light btn-reserve" type="submit" name="action">Reserve
-                <i class="material-icons right">send</i>
-            </button>
-        </div>
-       
-        
+    
         <!-- Modal Structure -->
           <div id="modal1" class="modal">
             <div class="modal-content">
@@ -262,7 +261,7 @@
            $(document).ready(function(){
                 // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
                 $('.modal').modal();
-                $("#literary-materials-container").hide();
+                $("#reserve-rooms-container").hide();
               });
            
             $("#literary-materials").click(function(){
