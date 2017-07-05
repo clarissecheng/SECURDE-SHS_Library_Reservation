@@ -25,7 +25,7 @@
                 </div>
 
                  <ul id="nav-mobile" class="right">
-                    <li>
+                    <li class="search">
                         <select class="browser-default">
                            <option value="" disabled selected>Search by: </option>
                            <option value="1">Author</option>
@@ -33,7 +33,7 @@
                            <option value="3">Publisher</option>
                        </select>
                     </li>
-                    <li>
+                    <li class="search">
                         <div class="row">
                             <div class="input-field col s12">
                               <input id="last_name" type="text" class="validate">
@@ -267,11 +267,13 @@
             $("#literary-materials").click(function(){
                 $("#literary-materials-container").show();
                 $("#reserve-rooms-container").hide();
+                $(".search").show();
             });
 
             $("#reserve-rooms").click(function(){
                 $("#literary-materials-container").hide();
                 $("#reserve-rooms-container").show();
+                $(".search").hide();
             });
         </script>
     </body>
